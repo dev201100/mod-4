@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mod4</title> 
+</head>
+<body>
+	<h1>Click inspect to see the output</h1>
+</body>
+  <script>(function (window){
+     var helloSpeak = {};
+     var helloWord = "Hello";
+     helloSpeak.speak = function (names) {
+     console.log(helloWord + " " + helloSpeak.speak(names[i]));
+  }
+   window.helloSpeak =  helloSpeak;
+})(window);
+  </script>
+  <script>(function (window){
+    var byeSpeak = {};
+    var speakWord = "Goodbye";
+    byeSpeak.speak = function (names) {
+    console.log(speakWord + " " + byeSpeak.speak(names[i]));
+   }
+    window.byeSpeak = byeSpeak;
+})(window);
+</script>
+<script>(function (window){
+	var names=["dev"];
+	var i = names;
+    for (var i in names) {
+    	var firstLetter = ((names[i]).charAt(0)).toLowerCase();
+    if (firstLetter === 'j') {
+     window.byeSpeak.speak(names[i]);
+    }
+    else {
+     window.helloSpeak.speak(names[i]);
+    }
+                        };                                                                        
+})(window);
+</script>
+</html>
